@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+}
+.container{
+    margin-top: 50px;
+display: flex;
+flex-direction: column;
+background-color: pink;
+}
+.addBtn ,.updateBtn{
+    background-color: palevioletred;
+    color: white;
+    border: 0;
+    padding: 10px;
+border-radius: 50px;
+}
