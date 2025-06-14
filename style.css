@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+.container{
+    margin-top: 50px;
+display: flex;
+flex-direction: column;
+background-color: pink;
+}
+#addBtn ,#updateBtn{
+    background-color: palevioletred;
+    color: white;
+    border: 0;
+    padding: 10px;
+border-radius: 50px;
+width: 100%;
+}
+
+  i{
+    top: 70%;
+     right: 15px;
+      transform: translateY(-50%);
+       font-size: 18px;
+  }
+
+  #descIcon{
+    
+    top: 60%;
+    right: 15px;
+     transform: translateY(-50%);
+      font-size: 18px;
+  }
