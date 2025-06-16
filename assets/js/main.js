@@ -31,7 +31,26 @@ function clearForm() {
     productPrice.value = "";
     productType.value = "";
     productDescription.value = "";
+
+    // Remove Bootstrap validation classes
+    productName.classList.remove("is-valid", "is-invalid");
+    productPrice.classList.remove("is-valid", "is-invalid");
+    productType.classList.remove("is-valid", "is-invalid");
+    productDescription.classList.remove("is-valid", "is-invalid");
+
+    // Hide error messages
+    nameError.classList.add("d-none");
+    priceError.classList.add("d-none");
+    typeError.classList.add("d-none");
+    descError.classList.add("d-none");
+
+    // Hide icons (لو عندك أيقونات ظاهرين لازم تشيليهم كمان)
+    if (typeof priceIcon !== "undefined") priceIcon.classList.add("d-none");
+    if (typeof typeIcon !== "undefined") typeIcon.classList.add("d-none");
+    if (typeof descIcon !== "undefined") descIcon.classList.add("d-none");
 }
+
+
 function displayProducts(arr)
 {
     var cartona = "";
@@ -92,7 +111,7 @@ function validationName() {
         productName.classList.remove("is-invalid");
         return true;
     } else {
-        nameError.classList.remove("d-none");
+         nameError.classList.remove("d-none");
         productName.classList.add("is-invalid");
         productName.classList.remove("is-valid");
 
@@ -111,7 +130,7 @@ function validationPrice() {
         priceError.classList.add("d-none");
         productPrice.classList.add("is-valid");
         productPrice.classList.remove("is-invalid");
-        priceIcon.classList.remove("d-none");
+        // priceIcon.classList.remove("d-none");
         return true;
     } else {
         priceError.classList.remove("d-none");
@@ -157,13 +176,13 @@ function validateDescription() {
         descError.classList.add("d-none");
         productDescription.classList.add("is-valid");
         productDescription.classList.remove("is-invalid");
-        descIcon.classList.remove("d-none");
+        
         return true;
     } else {
         descError.classList.remove("d-none");
         productDescription.classList.add("is-invalid");
         productDescription.classList.remove("is-valid");
-        descIcon.classList.add("d-none");
+        // descIcon.classList.add("d-none");
         return false;
     }
 }
